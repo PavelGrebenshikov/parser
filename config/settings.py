@@ -3,13 +3,13 @@
 """
 
 # URL sites for parsing
-URL = 'https://www.newsru.com/'
+URL = 'https://www.python.org/blogs/'
 
 # This all tags html for parser
-TAGS_HTML = ['h3', 'div']
+TAGS_HTML = ['h3', 'h1', 'h2', 'li']  # Tags for adding elements for parsing
 
 # This all links classes for parsera
-LINKS_CLASS = ['event-title', 'event-warp']
+LINKS_CLASS = ['event-title', 'call-to-action', 'widget-title', 'tier-1 element-1'] # Classes for adding elements for parsing
 
 # HEADERS for parsing
 HEADER = {'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; \

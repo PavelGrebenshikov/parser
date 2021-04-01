@@ -10,8 +10,8 @@ def started():
     """ Start Parsing  """
     Parser = ClassParser()
     reponse_access = Parser.check_access(URL, HEADER)
-    content = Parser.put_content(reponse_access, TAGS_HTML, LINKS_CLASS)
-    Parser.write_file(content)
+    elements = Parser.count_content_put(TAGS_HTML, LINKS_CLASS)
+    content = Parser.put_content(reponse_access, elements)
 
     """ Start ClassViewContent """
     Strings = ClassViewContent()
@@ -27,5 +27,7 @@ def started():
     server = ClassStartServer
     server.start_serv()
 
+
+
 if __name__ == '__main__':
-    started()    
+    started()

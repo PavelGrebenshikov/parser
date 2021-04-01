@@ -7,18 +7,30 @@ from sys import path
 
 class ClassViewContent():
 
+
     def view_content(self, content):
     # function for added tags for content
-        _content = []
-        for i in range(0, len(content)):
-            _content.append(content[i])
-        
-        return _content
 
+        __content = []
+        connected_array = []
+        if "Error" and "Exception" in content:
+            __content.append(content)
+        else:
+            for i in range(0, len(content)):
+                __content.append(content[i])
+
+        for s in __content:
+            for a in s:
+                connected_array.append(a)
+
+        return connected_array
+
+    # record file for save and future use
     def write_tag(self, tag):
         try:
-            with open(path[0] + '/data/tags/tag.txt', 'w', encoding='utf-8') as tag_f:
-                for i in range(0, len(tag)):
-                    tag_f.writelines(tag[i] + '\\n')
+            # count files in folder save
+            ln_file = str(len(os.listdir(path=path[0] + '/data/save/')) + 1)
+            with open(path[0] + f'/data/save/save_{ln_file}.txt', mode='w', encoding='utf-8') as tag_f:
+                    tag_f.writelines(str(tag))
         except Exception:
             return "Error Exception write tag html"
