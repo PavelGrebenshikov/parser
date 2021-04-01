@@ -14,3 +14,7 @@ LINKS_CLASS = ['event-title', 'call-to-action', 'widget-title', 'tier-1 element-
 # HEADERS for parsing
 HEADER = {'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; \
             rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'}
+
+
+# if SAVE_FILES = False, maximum record in file "save"  == 10.
+SAVE_FILE = True
