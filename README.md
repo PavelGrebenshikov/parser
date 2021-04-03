@@ -19,3 +19,5 @@ TAGS_HTML and LINKS_CLASS must match in the array by index
 
 3. After setting up settings.py go to the folder template/page_settings.html where we configure the external design.
    To output information, use news ["content_0"], where content_0 is the output of the first HTML tag
+   
+4. Start script in terminal python3 start.py
