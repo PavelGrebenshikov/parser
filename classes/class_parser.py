@@ -41,6 +41,7 @@ class ClassParser():
                     content = BeautifulSoup(response[1].text, 'html.parser').find_all("{}".format(tags_html["tags"][i]), class_="{}".format(tags_html["class"][i]))
                     self.write_file(content)
                     data_content.append(content)
+                
                 return data_content
         except Exception:
             return "Error. Exception put content"

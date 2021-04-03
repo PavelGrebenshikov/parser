@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """ Start programm """
 """ imports """
 from config.settings import URL, HEADER, TAGS_HTML, LINKS_CLASS, SAVE_FILE
@@ -25,7 +26,7 @@ def started():
         Strings.write_tag(tag_html)
 
     """ Start ClassViewTemplate """
-    ViewTemplate = ClassViewTemplate()
+    ViewTemplate = ClassViewTemplate(LINKS_CLASS, TAGS_HTML, content)
     template_page = ViewTemplate.view_template(tag_html)
     ViewTemplate.write_template(template_page)
 
