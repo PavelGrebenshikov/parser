@@ -6,6 +6,8 @@ A parser of a single site and a set of elements and output to a template in a di
 
 After installation, you need to configure the application.
 
+!!! Create two folders in directory data/. first folder name - parser. two folder name - save !!!
+
 1. Go to the folder config/settings.py
 
 2. You need to fill in the URL | TAGS_HTML | LINKS_CLASS | HEADER
