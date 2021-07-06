@@ -44,7 +44,7 @@ class ClassViewContent():
 
 
     def check_max_files(self, save):
-            if not self.check_directory:
+            if not self.check_directory():
                 os.mkdir(os.getcwd() + "\\data\\save")
             
             files = os.listdir(path[0] + '/data/save')
