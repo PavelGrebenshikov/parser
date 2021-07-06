@@ -35,14 +35,17 @@ class ClassViewContent():
         except Exception:
             return "Error Exception write tag html"
 
+    def check_directory(self):
+        directory = os.listdir(os.getcwd() + "/data")
+        for dir_save in directory:
+            if dir_save in "save":
+               return True
+        return False
+
+
     def check_max_files(self, save):
-            directory = os.listdir(os.getcwd() + "/data")
-            for dir_save in directory:
-                if dir_save in "save":
-                    break
-                else:
-                    os.mkdir(os.getcwd() + "/data/save")
-                    break
+            if self.check_directory:
+                os.mkdir(os.getcwd() + "\\data\\save")
             
             files = os.listdir(path[0] + '/data/save')
             if len(files) >= 10:
