@@ -36,13 +36,21 @@ class ClassViewContent():
             return "Error Exception write tag html"
 
     def check_max_files(self, save):
-        files = os.listdir(path[0] + '/data/save')
-        if len(files) >= 10:
-            if save:
-                print("Maximum create files in save")
-                print(f"Delete text files along the way: '{path[0]}/data/save/'")
-                return False
+            directory = os.listdir(os.getcwd() + "/data")
+            for dir_save in directory:
+                if dir_save in "save":
+                    break
+                else:
+                    os.mkdir(os.getcwd() + "/data/save")
+                    break
+            
+            files = os.listdir(path[0] + '/data/save')
+            if len(files) >= 10:
+                if save:
+                    print("Maximum create files in save")
+                    print(f"Delete text files along the way: '{path[0]}/data/save/'")
+                    return False
+                else:
+                    return True
             else:
                 return True
-        else:
-            return True
