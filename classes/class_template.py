@@ -37,11 +37,12 @@ class ClassViewTemplate():
 
         # checking lenght contents and class_item&html
         if len(content) == len(class_item) and len(html):
-            content_dict = {}
-            for item_content in content:
-                ln_item_content = len(item_content)
-                for i in range(0, ln_item_content):
-                    content_dict.update({f"content_{i}": item_content[i]})
-            return content_dict
+#             content_dict = {}
+#             for item_content in content:
+#                 ln_item_content = len(item_content)
+#                 for i in range(0, ln_item_content):
+#                     content_dict.update({f"content_{i}": item_content[i]})
+#             return content_dict
+              return content
         else:
             return []
